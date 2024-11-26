@@ -2,7 +2,7 @@
 
 namespace App\Tasks;
 
-class TwoSum
+class TwoSumTwo
 {
     // store the value of the array as keys and index as values in hashMap array
     public function findAndMoveSumOfTargetValues($array, $target){

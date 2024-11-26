@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use App\Tasks\TwoSum;
+use App\Tasks\TwoSumTwo;
 use PHPUnit\Framework\TestCase;
 
 class TwoSumTest extends TestCase
@@ -21,7 +22,7 @@ class TwoSumTest extends TestCase
         $target = 18;
         $expectedArrayValues = [7, 11, 2, 15];
 
-        $twoSum = new TwoSum();
+        $twoSum = new TwoSumTwo();
         $result = $twoSum->findAndMoveSumOfTargetValues($arrayValues, $target);
         $this->assertEquals($result, $expectedArrayValues);
     }
@@ -37,7 +38,7 @@ class TwoSumTest extends TestCase
         $target = 7;
         $expectedArrayValues = [-4, 11, 2, 5, 3, 8] ;
 
-        $twoSum = new TwoSum();
+        $twoSum = new TwoSumTwo();
         $result = $twoSum->findAndMoveSumOfTargetValues($arrayValues, $target);
         $this->assertEquals($result, $expectedArrayValues);
     }
@@ -52,7 +53,7 @@ class TwoSumTest extends TestCase
         $target = 18;
         $expectedArrayValues = [2, 10, 7, 15];
 
-        $twoSum = new TwoSum();
+        $twoSum = new TwoSumTwo();
         $result = $twoSum->findAndMoveSumOfTargetValues($arrayValues, $target);
         $this->assertEquals($result, $expectedArrayValues);
     }
