@@ -19,7 +19,7 @@ class TwoSumTest extends TestCase
     {
         $arrayValues = [2, 11, 7, 15];
         $target = 18;
-        $expectedArrayValues = [11, 7, 2, 15];
+        $expectedArrayValues = [7, 11, 2, 15];
 
         $twoSum = new TwoSum();
         $result = $twoSum->findAndMoveSumOfTargetValues($arrayValues, $target);
@@ -33,9 +33,9 @@ class TwoSumTest extends TestCase
      */
     public function testTwoSumTwoSumFound2(): void
     {
-        $arrayValues = [2, 11,  15, 7];
-        $target = 18;
-        $expectedArrayValues = [11, 7, 2, 15];
+        $arrayValues = [3, 5, 2, -4, 8, 11];
+        $target = 7;
+        $expectedArrayValues = [-4, 11, 2, 5, 3, 8] ;
 
         $twoSum = new TwoSum();
         $result = $twoSum->findAndMoveSumOfTargetValues($arrayValues, $target);

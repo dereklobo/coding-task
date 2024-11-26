@@ -18,21 +18,18 @@ class TwoSum
                 $first = $array[$hashMap[$complement]]; // index of found
                 $second = $array[$index];
 
-                // unset the first and second array positions
+                // unset the first and second array values
                 unset($array[$hashMap[$complement]]);
                 unset($array[$index]);
 
                 // move array positions by merging the remaining array positions with reassigned index
-                $array = array_merge([$first, $second], $array);
+                $sortTargetValuesAsc = $first < $second ? [$first, $second]: [$second, $first];
+                $array = array_merge($sortTargetValuesAsc, $array);
             }
             // add value as key and index as value to the hashmap array
             $hashMap[$value] = $index;
             // dump('hashmap for index: '.$value.' and value:'.$index);
         }
-        // dump('hashmap index for 2. :'.$hashMap[2]);
-        // dump('hashmap index for 11 . :'.$hashMap[11]);
-        // dump('hashmap index for 7. :'.$hashMap[7]);
-        // dump('hashmap index for 15. :'.$hashMap[15]);
         return $array;
     }
 }
