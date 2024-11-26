@@ -15,12 +15,12 @@ class CreditCardController extends Controller
     public function mask(Request $request)
     {
         $validated = $request->validate([
-            'card_number' => 'string',
+            'card_number' => 'required|string|min:16|numeric',
         ]);
 
         $cardNumber = $validated['card_number'];
         $maskedCard = str_repeat('*', 12) . substr($cardNumber, -4);
-
+        
         return response()->json(['masked_card' => $maskedCard]);
     }
 }
