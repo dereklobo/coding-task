@@ -17,7 +17,6 @@ class MaskCreditCard
      */
     public function maskCreditCard($cardNumber)
     {
-        // dump('string length: '.strlen($cardNumber));
         // dump('number is: '.$cardNumber);
         if(strlen($cardNumber) !== 16 || !is_numeric($cardNumber) || (int)$cardNumber < 0)
         {

@@ -21,10 +21,10 @@ class MoveZero
         $numberOfZeros = count($array) - count($nonZeroArray);
 
         // fill value 0 to array based on number of zeros counted in array
-        $addZeroToEnd = array_fill(0, $numberOfZeros, 0);
+        $zeroArray = array_fill(0, $numberOfZeros, 0);
 
         // merge the nonzero array and zero array with zero array as the second parameter
-        $appendZero = array_merge($nonZeroArray, $addZeroToEnd);
+        $appendZero = array_merge($nonZeroArray, $zeroArray);
 
         return $appendZero;
     }
